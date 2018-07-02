@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70CA3EE8-7EFE-4E37-8A6C-85AD606B83A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dairy1</RootNamespace>
+    <AssemblyName>Dairy1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.cs" />
+    <Compile Include="ReadManager.cs" />
+    <Compile Include="SeconeBook.cs" />
+    <Compile Include="BGM.cs" />
+    <Compile Include="Calender.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="TextManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericComponents.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoadingPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TurnPage.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\load0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\load1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\load2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\load3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\backbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\exit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\frontbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\last1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\last2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\load0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\load1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\load2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\load3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\loadshadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\next1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\next2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\shadow8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\start2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2015_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2013_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2014_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2016_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button1_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button1_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button2_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button2_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button3_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button3_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button4_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button4_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button5_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button5_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_1n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_1nf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_1y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_1yf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_2n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_2nf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_2y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_2yf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_3n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_3nf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_3y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_3yf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\bm_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2016_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2013_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\2014_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册\album_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册\album_bg_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册\album_bg_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册\album_lock_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册\album_lock_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册\album_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\桌子和书\book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\桌子和书\book2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\桌子和书\desk_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_calendar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_diary1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_diary2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_exit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_music1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_music2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_photo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_photo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_extra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_extra2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t6.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\t7.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\140328.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\140626.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\141008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\141231.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\150512.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\150527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\151010.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\151011.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\151231.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\160524.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\160525.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\1410081.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\1504031.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\1504032.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\1505271.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\1505272.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\1605251.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\IMG_2964.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\高一科艺节.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\高一科艺节.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\高一艺术墙.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\相册测试\高一运动会.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton1f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton2f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton3f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton4f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton5f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton6f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton7f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton8f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton9f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton10f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton11f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mbutton12f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mr_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\music_room\mr_demo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_bookmark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\tb_bookmark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button6_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button6_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button7_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Image\menu_button7_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load5.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
